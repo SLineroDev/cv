@@ -1,0 +1,118 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.resume {
+    display: grid;
+    width: 80%;
+    height: 100%;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: Auto 1fr 1fr;
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.35);
+    grid-template-areas:
+        "photo  name      name"
+        "info   work      skills"
+        "other  education skills";
+    /* grid-gap: 5px; */
+}
+
+.grid-area {
+    padding: 20px;
+    /*     border : 1px black solid; */
+}
+
+.sectionTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+hr{
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+.sectionSubTitle{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.info .contact, .info .portfolio{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.info  i{
+    font-size: 22px;
+    width: 30px;
+}
+
+.name {
+    grid-area: name;
+}
+
+.name > div{
+    margin-bottom: 10px;
+}
+
+.name > .nombre {
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+.name > .oficio {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+/* .name > .sobreMi {
+} */
+
+.photo {
+    grid-area: photo;
+    margin: 0 auto;
+}
+
+.work {
+    grid-area: work;
+}
+
+.other {
+    grid-area: other;
+}
+
+.skills {
+    grid-area: skills;
+}
+.skillsContainer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.skill {
+    background-color: rgb(172, 218, 255);
+    display: inline-block;
+    padding: .5rem;
+    border-radius: .6em;
+    margin-bottom: .28rem;
+}
+
+.education {
+    grid-area: education;
+}
+
+.info {
+    grid-area: info;
+}
+
+/* align cv to center of page */
+
+.wrapper {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
