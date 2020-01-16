@@ -179,7 +179,7 @@ hr {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 830px) {
     .resume {
         width: 100%;
         grid-template-columns: auto 1fr 1fr;
@@ -191,10 +191,10 @@ hr {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1217px) {
     .resume {
         width: 85%;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto 2fr 1fr;
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
             "photo      name        name"
