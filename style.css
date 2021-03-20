@@ -72,17 +72,16 @@ body main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
-      grid-template-areas: "contact  work" "others education" "skills skills";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "contact" "work" "education" "others" "skills";
 }
 
-body main h3 {
+body main section h3 {
+  margin: 1.3rem 0 0.6rem 0;
   padding-left: 0.2rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
@@ -117,8 +116,8 @@ body main .contact .contact-content .contact-item span {
 }
 
 body main .work {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: work;
 }
 
@@ -159,7 +158,7 @@ body main .work ul li .work-item-content .work-item-info {
 }
 
 body main .others {
-  -ms-grid-row: 2;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: others;
 }
@@ -184,8 +183,8 @@ body main .others .others-content .others-item .others-car-items {
 }
 
 body main .education {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: education;
 }
 
@@ -221,9 +220,8 @@ body main .education ul li .education-item-content .education-item-place {
 }
 
 body main .skills {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: skills;
 }
 
@@ -231,14 +229,14 @@ body main .skills .skills-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body main .skills .skills-content .skills-section {
-  margin: 0 0.6rem;
+body main .skills .skills-content .skills-section h4 {
+  margin: 1.3rem 0 0.6rem 0;
 }
 
 body main .skills .skills-content .skills-section .skill-tag {
@@ -249,10 +247,50 @@ body main .skills .skills-content .skills-section .skill-tag {
   margin: 0.4rem 0.2rem;
 }
 
-@media only screen and (min-width: 600px) {
+@media (min-width: 700px) {
   body main {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding: 1rem 4rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "contact work" "others education" "skills skills";
+  }
+  body main .contact {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: contact;
+  }
+  body main .work {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: work;
+  }
+  body main .education {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: education;
+  }
+  body main .others {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: others;
+  }
+  body main .skills {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: skills;
+  }
+}
+
+@media (min-width: 1100px) {
+  body main {
+    padding: 1rem 9rem;
+  }
+  body main .skills .skills-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -265,4 +303,3 @@ body footer {
   height: 20px;
   background-color: #719e64;
 }
-/*# sourceMappingURL=style.css.map */

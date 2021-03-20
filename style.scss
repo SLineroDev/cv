@@ -47,26 +47,29 @@ body {
       }
     }
   }
-
   main {
     flex: 1;
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "contact  work"
-      "others education"
-      "skills skills";
+      "contact"
+      "work"
+      "education"
+      "others"
+      "skills";
 
-    h3 {
-      padding-left: 0.2rem;
-      letter-spacing: 0.2rem;
-      font-weight: 700;
-      font-size: 1.2rem;
-      border-left: #719e64 solid 0.45rem;
-      border-bottom: #719e64 solid 0.45rem;
-      display: inline-block;
+    section {
+      h3 {
+        margin: 1.3rem 0 0.6rem 0;
+        padding-left: 0.2rem;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        border-left: #719e64 solid 0.45rem;
+        border-bottom: #719e64 solid 0.45rem;
+        display: inline-block;
+      }
     }
 
     .contact {
@@ -89,7 +92,6 @@ body {
       ul {
         padding: 0 0 0 2rem;
         margin: 0;
-
         li {
           color: #719e64;
           font-size: 1.5rem;
@@ -165,9 +167,11 @@ body {
       grid-area: skills;
       .skills-content {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         .skills-section {
-          margin: 0 0.6rem;
+          h4 {
+            margin: 1.3rem 0 0.6rem 0;
+          }
           .skill-tag {
             border-radius: 0.4rem;
             display: inline-block;
@@ -179,10 +183,42 @@ body {
       }
     }
   }
-  @media only screen and (min-width: 600px) {
+  @media (min-width: 700px) {
     main {
-      padding-left: 4rem;
-      padding-right: 4rem;
+      padding: 1rem 4rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "contact work"
+        "others education"
+        "skills skills";
+      .contact {
+        grid-area: contact;
+      }
+
+      .work {
+        grid-area: work;
+      }
+
+      .education {
+        grid-area: education;
+      }
+
+      .others {
+        grid-area: others;
+      }
+
+      .skills {
+        grid-area: skills;
+      }
+    }
+  }
+
+  @media (min-width: 1100px) {
+    main {
+      padding: 1rem 9rem;
+      .skills .skills-content {
+        flex-direction: row;
+      }
     }
   }
 
