@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    background-color: #1f2024;
+    color: white;
+    .header-container {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-evenly;
+      img {
+        border: white 1px solid;
+        align-self: center;
+      }
+      .titles-container {
+        align-self: center;
+        letter-spacing: 0.2rem;
+        h1 {
+          padding: 1rem;
+          font-size: 3.5rem;
+          font-weight: 600;
+          margin: 0;
+          margin-block-end: 0 !important;
+          margin-block-start: 0 !important;
+        }
+        h2 {
+          padding: 1rem;
+          margin: 0;
+          font-size: 2rem;
+          color: #719e64;
+          font-weight: 600;
+        }
+        text-align: end;
+      }
+    }
+  }
+
+  main {
+    flex: 1;
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "contact  work"
+      "others education"
+      "skills skills";
+
+    h3 {
+      padding-left: 0.2rem;
+      letter-spacing: 0.2rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-left: #719e64 solid 0.45rem;
+      border-bottom: #719e64 solid 0.45rem;
+      display: inline-block;
+    }
+
+    .contact {
+      grid-area: contact;
+      .contact-content {
+        .contact-item {
+          margin-bottom: 0.3rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          span {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+
+    .work {
+      grid-area: work;
+      ul {
+        padding: 0 0 0 2rem;
+        margin: 0;
+
+        li {
+          color: #719e64;
+          font-size: 1.5rem;
+          padding-bottom: 0.2rem;
+          .work-item-content {
+            font-size: 1rem;
+            color: black;
+            .work-item-title {
+              font-weight: 700;
+              font-size: 1.1rem;
+              span {
+                margin-left: 0.5rem;
+                color: #719e64;
+              }
+            }
+            .work-item-time {
+              font-weight: 600;
+            }
+            .work-item-info {
+              font-size: 0.9rem;
+              font-weight: 400;
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+
+    .others {
+      grid-area: others;
+      .others-content .others-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0.7rem;
+        span,
+        .others-car-items {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .education {
+      grid-area: education;
+      ul {
+        padding: 0 0 0 2rem;
+        margin: 0;
+        li {
+          color: #719e64;
+          font-size: 1.5rem;
+          padding-bottom: 0.2rem;
+          .education-item-content {
+            font-size: 1rem;
+            color: black;
+            .education-item-title {
+              font-size: 1.1rem;
+              font-weight: 700;
+            }
+            .education-item-time {
+              font-weight: 600;
+            }
+            .education-item-place {
+              margin-left: 1rem;
+              font-style: italic;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .skills {
+      grid-area: skills;
+      .skills-content {
+        display: flex;
+        flex-direction: row;
+        .skills-section {
+          margin: 0 0.6rem;
+          .skill-tag {
+            border-radius: 0.4rem;
+            display: inline-block;
+            background-color: #d4e2d0;
+            padding: 0.4rem;
+            margin: 0.4rem 0.2rem;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    main {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  footer {
+    height: 60px;
+    background-color: #1f2024;
+  }
+}
+
+.green-border {
+  height: 20px;
+  background-color: #719e64;
+}

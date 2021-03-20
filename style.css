@@ -1,215 +1,268 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(235, 235, 235);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.resume {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "photo"
-        "name"
-        "portfolio"
-        "contact"
-        "work"
-        "skills"
-        "education"
-        "other";
+body header {
+  background-color: #1f2024;
+  color: white;
 }
 
-.grid-area {
-    padding: 10px;
-    /*border : 1px black solid; */
+body header .header-container {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-hr {
-    display: none;
-    border: none;
-    height: 1px;
-    /* Set the hr color */
-    color: #333;
-    /* old IE */
-    background-color: #333;
-    /* Modern Browsers */
+body header .header-container img {
+  border: white 1px solid;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.sectionTitle {
-    color: whitesmoke;
-    padding: 7px;
-    padding-left: 10px;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
-    border-radius: 10px;
-    background-color: rgb(0, 0, 0);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+body header .header-container .titles-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 0.2rem;
+  text-align: end;
 }
 
-.sectionSubTitle {
-    font-size: 1.1rem;
-    font-weight: bold;
-    display: inline-block;
+body header .header-container .titles-container h1 {
+  padding: 1rem;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0;
+  -webkit-margin-after: 0 !important;
+          margin-block-end: 0 !important;
+  -webkit-margin-before: 0 !important;
+          margin-block-start: 0 !important;
 }
 
-.subTitle1 {
-    margin-left: 1em;
-    font-size: 1.05em;
-    font-style: italic;
-    display: block;
+body header .header-container .titles-container h2 {
+  padding: 1rem;
+  margin: 0;
+  font-size: 2rem;
+  color: #719e64;
+  font-weight: 600;
 }
 
-.subTitle2 {
-    margin-left: 2em;
-    font-size: 1em;
-    display: block;
+body main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "contact  work" "others education" "skills skills";
 }
 
-.photo {
-    grid-area: photo;
-    margin: 0 auto;
+body main h3 {
+  padding-left: 0.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-left: #719e64 solid 0.45rem;
+  border-bottom: #719e64 solid 0.45rem;
+  display: inline-block;
 }
 
-.name {
-    grid-area: name;
+body main .contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: contact;
 }
 
-.name>div {
-    margin-bottom: 10px;
+body main .contact .contact-content .contact-item {
+  margin-bottom: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.name>.nombre {
-    font-size: 3.3em;
-    font-weight: bolder;
+body main .contact .contact-content .contact-item span {
+  margin-left: 1rem;
 }
 
-.name>.oficio {
-    font-size: 1.7em;
-    font-weight: bold;
+body main .work {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: work;
 }
 
-/* .name > .sobreMi {
-} */
-
-.portfolio {
-    grid-area: portfolio;
+body main .work ul {
+  padding: 0 0 0 2rem;
+  margin: 0;
 }
 
-.contact {
-    grid-area: contact;
+body main .work ul li {
+  color: #719e64;
+  font-size: 1.5rem;
+  padding-bottom: 0.2rem;
 }
 
-.portfolio i,
-.contact i {
-    font-size: 22px;
-    width: 30px;
+body main .work ul li .work-item-content {
+  font-size: 1rem;
+  color: black;
 }
 
-.contact .contactContent,
-.portfolio .portfolioContent,
-.separador {
-    margin-top: 5px;
-    margin-bottom: 5px;
+body main .work ul li .work-item-content .work-item-title {
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
-
-.work {
-    grid-area: work;
+body main .work ul li .work-item-content .work-item-title span {
+  margin-left: 0.5rem;
+  color: #719e64;
 }
 
-.other {
-    grid-area: other;
+body main .work ul li .work-item-content .work-item-time {
+  font-weight: 600;
 }
 
-.otherContent {
-    display: inline-block;
-    margin-left: auto;
+body main .work ul li .work-item-content .work-item-info {
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.skills {
-    grid-area: skills;
+body main .others {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: others;
 }
 
-.skillsContainer {
-    margin-top: 10px;
-    margin-bottom: 10px;
+body main .others .others-content .others-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.7rem;
 }
 
-.skill {
-    background-color: rgb(211, 211, 211);
-    display: inline-block;
-    padding: .5rem;
-    border-radius: .6em;
-    margin-bottom: .28rem;
+body main .others .others-content .others-item span,
+body main .others .others-content .others-item .others-car-items {
+  margin-left: 1rem;
 }
 
-.education {
-    grid-area: education;
+body main .education {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: education;
 }
 
-
-/* align cv to center of page */
-
-.wrapper {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body main .education ul {
+  padding: 0 0 0 2rem;
+  margin: 0;
 }
 
-@media (min-width: 600px) {
-    .resume {
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "photo"
-            "name"
-            "portfolio"
-            "contact"
-            "work"
-            "skills"
-            "education"
-            "other"
-    }
+body main .education ul li {
+  color: #719e64;
+  font-size: 1.5rem;
+  padding-bottom: 0.2rem;
 }
 
-@media (min-width: 830px) {
-    .resume {
-        width: 100%;
-        grid-template-columns: auto 1fr 1fr;
-        grid-template-areas:
-            "photo name name"
-            "work work skills"
-            "education education skills"
-            "other contact portfolio"
-    }
+body main .education ul li .education-item-content {
+  font-size: 1rem;
+  color: black;
 }
 
-@media (min-width: 1217px) {
-    .resume {
-        width: 85%;
-        grid-template-columns: auto 2fr 1fr;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-            "photo      name        name"
-            "contact  work        skills"
-            "other    education   skills"
-            "portfolio      portfolio   portfolio";
-    }
-
-    .portfolio {
-        text-align: center;
-    }
+body main .education ul li .education-item-content .education-item-title {
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
-@media (min-width: 1500px) {
-    .resume {
-        width: 80%;
-    }
+body main .education ul li .education-item-content .education-item-time {
+  font-weight: 600;
 }
+
+body main .education ul li .education-item-content .education-item-place {
+  margin-left: 1rem;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+body main .skills {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: skills;
+}
+
+body main .skills .skills-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .skills .skills-content .skills-section {
+  margin: 0 0.6rem;
+}
+
+body main .skills .skills-content .skills-section .skill-tag {
+  border-radius: 0.4rem;
+  display: inline-block;
+  background-color: #d4e2d0;
+  padding: 0.4rem;
+  margin: 0.4rem 0.2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  body main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+body footer {
+  height: 60px;
+  background-color: #1f2024;
+}
+
+.green-border {
+  height: 20px;
+  background-color: #719e64;
+}
+/*# sourceMappingURL=style.css.map */
