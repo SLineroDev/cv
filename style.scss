@@ -18,12 +18,14 @@ body {
     background-color: #1f2024;
     color: white;
     .header-container {
-      padding: 2rem;
+      padding: 0 2rem 2rem 2rem;
       display: flex;
       justify-content: space-evenly;
       img {
         border: white 1px solid;
-        align-self: center;
+        height: 200px;
+        border-radius: 0 0 4rem 4rem;
+        align-self: flex-start;
       }
       .titles-container {
         align-self: center;

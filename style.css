@@ -25,7 +25,7 @@ body header {
 }
 
 body header .header-container {
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,9 +36,10 @@ body header .header-container {
 
 body header .header-container img {
   border: white 1px solid;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  height: 200px;
+  border-radius: 0 0 4rem 4rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 body header .header-container .titles-container {
