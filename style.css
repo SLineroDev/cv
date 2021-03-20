@@ -25,7 +25,7 @@ body header {
 }
 
 body header .header-container {
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 2rem 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +52,7 @@ body header .header-container .titles-container {
 
 body header .header-container .titles-container h1 {
   padding: 1rem;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   margin: 0;
   -webkit-margin-after: 0 !important;
@@ -64,7 +64,7 @@ body header .header-container .titles-container h1 {
 body header .header-container .titles-container h2 {
   padding: 1rem;
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #719e64;
   font-weight: 600;
 }
@@ -73,7 +73,7 @@ body main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 1rem 1rem;
+  padding: 0 2rem 1rem 2rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -248,11 +248,17 @@ body main .skills .skills-content .skills-section .skill-tag {
   margin: 0.4rem 0.2rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
+  body header .header-container .titles-container h1 {
+    font-size: 3.5rem;
+  }
+  body header .header-container .titles-container h2 {
+    font-size: 2rem;
+  }
   body main {
-    padding: 1rem 4rem;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    padding: 1rem 2rem;
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
         grid-template-areas: "contact work" "others education" "skills skills";
   }
   body main .contact {

@@ -18,7 +18,7 @@ body {
     background-color: #1f2024;
     color: white;
     .header-container {
-      padding: 0 2rem 2rem 2rem;
+      padding: 0 2rem 1rem 2rem;
       display: flex;
       justify-content: space-evenly;
       img {
@@ -32,7 +32,7 @@ body {
         letter-spacing: 0.2rem;
         h1 {
           padding: 1rem;
-          font-size: 3.5rem;
+          font-size: 2.5rem;
           font-weight: 600;
           margin: 0;
           margin-block-end: 0 !important;
@@ -41,7 +41,7 @@ body {
         h2 {
           padding: 1rem;
           margin: 0;
-          font-size: 2rem;
+          font-size: 1.5rem;
           color: #719e64;
           font-weight: 600;
         }
@@ -51,7 +51,7 @@ body {
   }
   main {
     flex: 1;
-    padding: 1rem 1rem;
+    padding: 0 2rem 1rem 2rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -185,10 +185,22 @@ body {
       }
     }
   }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
+    header {
+      .header-container {
+        .titles-container {
+          h1 {
+            font-size: 3.5rem;
+          }
+          h2 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
     main {
-      padding: 1rem 4rem;
-      grid-template-columns: 1fr 1fr;
+      padding: 1rem 2rem;
+      grid-template-columns: 1fr auto;
       grid-template-areas:
         "contact work"
         "others education"
