@@ -22,7 +22,7 @@ body {
       display: flex;
       justify-content: space-evenly;
       img {
-        border: white 1px solid;
+        border: white 2px solid;
         height: 200px;
         border-radius: 0 0 4rem 4rem;
         align-self: flex-start;
@@ -32,7 +32,6 @@ body {
         letter-spacing: 0.2rem;
         h1 {
           padding: 1rem;
-          font-size: 2.5rem;
           font-weight: 600;
           margin: 0;
           margin-block-end: 0 !important;
@@ -41,7 +40,6 @@ body {
         h2 {
           padding: 1rem;
           margin: 0;
-          font-size: 1.5rem;
           color: #719e64;
           font-weight: 600;
         }
@@ -67,7 +65,6 @@ body {
         padding-left: 0.2rem;
         letter-spacing: 0.2rem;
         font-weight: 700;
-        font-size: 1.2rem;
         border-left: #719e64 solid 0.45rem;
         border-bottom: #719e64 solid 0.45rem;
         display: inline-block;
@@ -96,14 +93,11 @@ body {
         margin: 0;
         li {
           color: #719e64;
-          font-size: 1.5rem;
           padding-bottom: 0.2rem;
           .work-item-content {
-            font-size: 1rem;
             color: black;
             .work-item-title {
               font-weight: 700;
-              font-size: 1.1rem;
               span {
                 margin-left: 0.5rem;
                 color: #719e64;
@@ -113,7 +107,6 @@ body {
               font-weight: 600;
             }
             .work-item-info {
-              font-size: 0.9rem;
               font-weight: 400;
               font-style: italic;
             }
@@ -143,13 +136,10 @@ body {
         margin: 0;
         li {
           color: #719e64;
-          font-size: 1.5rem;
           padding-bottom: 0.2rem;
           .education-item-content {
-            font-size: 1rem;
             color: black;
             .education-item-title {
-              font-size: 1.1rem;
               font-weight: 700;
             }
             .education-item-time {
@@ -158,7 +148,6 @@ body {
             .education-item-place {
               margin-left: 1rem;
               font-style: italic;
-              font-size: 0.9rem;
             }
           }
         }
@@ -190,10 +179,8 @@ body {
       .header-container {
         .titles-container {
           h1 {
-            font-size: 3.5rem;
           }
           h2 {
-            font-size: 2rem;
           }
         }
       }
