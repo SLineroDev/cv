@@ -9,6 +9,11 @@ jobs:
   ci:
     runs-on: ubuntu-18.04
     steps: 
-      - uses: actions/checkout@v2
-      - run: npx gh-pages -d ./ -b pages
-  
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Deploy to GH Pages
+        uses: actions/pages-deploy
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: ./ # The folder the action should deploy.  
